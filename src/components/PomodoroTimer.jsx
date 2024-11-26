@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import Card from "./Card";
 const PomodoroTimer = () => {
   const [timeLeft, setTimeLeft] = useState(15 * 60); // 15 minutes in seconds
   const [isRunning, setIsRunning] = useState(false);
@@ -34,6 +34,7 @@ const PomodoroTimer = () => {
 
   return (
     <div style={{ textAlign: "center" }}>
+      <Card></Card>
       <h1>Pomodoro Timer</h1>
       <h2>{formatTime(timeLeft)}</h2>
       <button onClick={() => setIsRunning(!isRunning)}>
